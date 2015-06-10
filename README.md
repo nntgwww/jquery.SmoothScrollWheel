@@ -1,5 +1,5 @@
 # jquery.SmoothScrollWheel
-Easy to get your website has smooth scrollwheel
+Easy to get your website has smooth scroll wheel
 
 ## Introduction
 
