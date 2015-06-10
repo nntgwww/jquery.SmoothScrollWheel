@@ -1,5 +1,5 @@
 /**
- * PLUGIN NAME: jQuery.SmoothScrollBar.js
+ * PLUGIN NAME: jQuery.SmoothScrollWheel.js
  * AUTHOR: Giang Nguyen - giang.nguyen.dev@gmail.com
  * VERSION: 0.1
  * LICENSE: MIT
@@ -25,8 +25,8 @@ function isEventSupported(eventName) {
 (function ($) {
 
     var proto;
-    proto = SmoothScrollBar.prototype;
-    function SmoothScrollBar(ele, options) {
+    proto = SmoothScrollWheel.prototype;
+    function SmoothScrollWheel(ele, options) {
         this.opts = $.extend({
             debug: false,
             defaultDetailDelta: 3,
@@ -64,14 +64,14 @@ function isEventSupported(eventName) {
         var opts = this.opts;
         var wheel = false;
 
-        ele.on("scroll.smoothScrollBar", function () {
+        ele.on("scroll.SmoothScrollWheel", function () {
             if (wheel === false) {
                 scrollTop = $(this).scrollTop();
             }
         });
 
 
-        ele.on("wheel.smoothScrollBar", function (e) {
+        ele.on("wheel.SmoothScrollWheel", function (e) {
             var oEvent = e.originalEvent;
             var eleHeight=proto.getHeightOfElement(elem);
 
@@ -98,13 +98,13 @@ function isEventSupported(eventName) {
         var opts = this.opts;
         var wheel = false;
 
-        ele.on("scroll.smoothScrollBar", function () {
+        ele.on("scroll.SmoothScrollWheel", function () {
             if (wheel === false) {
                 scrollTop = $(this).scrollTop();
             }
         });
 
-        ele.on("DOMMouseScroll.smoothScrollBar mousewheel.smoothScrollBar", function (e) {
+        ele.on("DOMMouseScroll.SmoothScrollWheel mousewheel.SmoothScrollWheel", function (e) {
 
             var eleHeight=proto.getHeightOfElement(elem);
             var newDelta = (e.originalEvent.detail) ? -e.originalEvent.detail / opts.defaultDetailDelta : e.originalEvent.wheelDelta / opts.defaultWheelDelta;
@@ -124,10 +124,10 @@ function isEventSupported(eventName) {
 
     };
 
-    $.fn.smoothScrollBar = function (op) {
+    $.fn.SmoothScrollWheel = function (op) {
         return this.each(function () {
-            if (!$.data(this, "smoothScrollBar")) {
-                $.data(this, "smoothScrollBar", new SmoothScrollBar(this, op));
+            if (!$.data(this, "SmoothScrollWheel")) {
+                $.data(this, "SmoothScrollWheel", new SmoothScrollWheel(this, op));
             }
         });
     };

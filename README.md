@@ -1,10 +1,10 @@
-# jquery.SmoothScrollBar
+# jquery.SmoothScrollWheel
 Easy to get your website has smooth scrollwheel
 
 ## Introduction
 
-Tired to get your website become smooth when user scrolling? jquery.SmoothScrollBar is a lightweight plugin help your case.
-View the demo [here](https://rawgit.com/nntgwww/jquery.SmoothScrollBar/master/Demo.html)
+Tired to get your website become smooth when user scrolling? jquery.SmoothScrollWheel is a lightweight plugin help your website smooth scroll wheel across browers.
+View the demo [here](https://rawgit.com/nntgwww/jquery.SmoothScrollWheel/master/Demo.html)
 
 ## How to use
 
@@ -13,16 +13,16 @@ Simple! Select your element need make it become smooth scroll and pass some simp
 ```javascript
 
 //Easy Mode
-$(document).smoothScrollBar();
+$(document).SmoothScrollWheel();
 
 //More Options
-$(document).smoothScrollBar({
+$(document).SmoothScrollWheel({
         defaultSpeed: 60,
         defaultAnimationTime: 1200
     });
 
 //Default Options
-$(document).smoothScrollBar({
+$(document).SmoothScrollWheel({
         debug: false,
         defaultDetailDelta: 3,
         defaultWheelDelta: 120,
@@ -50,11 +50,11 @@ However if your website have popups or sections have overflow-y and you have alr
 
 ```javascript
 // Once you implement $(document) smooth scrolling, you must also target these, or it won't scroll!
-$("#popup").smoothScrollBar();
-$("#div-has-overflow").smoothScrollBar();
+$("#popup").SmoothScrollWheel();
+$("#div-has-overflow").SmoothScrollWheel();
 
 
-$(document).smoothScrollBar();
+$(document).SmoothScrollWheel();
 
 ```
 
