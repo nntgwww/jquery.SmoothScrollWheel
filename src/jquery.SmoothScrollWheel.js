@@ -1,5 +1,5 @@
 /**
- * PLUGIN NAME: jQuery.SmoothScrollWheel.js
+ * PLUGIN NAME: jQuery.SmoothScrollWheel.js - https://github.com/nntgwww/jquery.SmoothScrollWheel
  * AUTHOR: Giang Nguyen - giang.nguyen.dev@gmail.com
  * VERSION: 0.1
  * LICENSE: MIT
