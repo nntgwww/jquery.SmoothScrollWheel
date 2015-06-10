@@ -29,7 +29,6 @@ function isEventSupported(eventName) {
     function SmoothScrollBar(ele, options) {
         this.opts = $.extend({
             debug: false,
-            isNotOverFlow: false,
             defaultDetailDelta: 3,
             defaultWheelDelta: 120,
             defaultSpeed: 50,
